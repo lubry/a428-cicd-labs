@@ -21,8 +21,8 @@
                 sh './jenkins/scripts/deliver.sh'
 		sleep(time:60,unit:"SECONDS")
 		}
+	   stage('End') {
 		steps {
-		sleep(time: 60, unit: "SECONDS")
 		sh './jenkins/scripts/kill.sh' 
                 } 
             }
