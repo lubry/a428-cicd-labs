@@ -17,8 +17,9 @@
                 }
             }
             stage('Deploy') { 
-            	steps {
+    	        steps {
                 sh './jenkins/scripts/deliver.sh' 
             }
         }
     }
+}
