@@ -18,7 +18,10 @@
             }
             stage('Deploy') { 
     	        steps {
-                sh './jenkins/scripts/deliver.sh' 
+                sh './jenkins/scripts/deliver.sh'
+                timeout(time: 2, unit: 'MINUTES') {
+		sh './jenkins/scripts/kill.sh' 
+                } 
             }
         }
     }
