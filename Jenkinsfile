@@ -20,6 +20,8 @@
     	        steps {
                 sh './jenkins/scripts/deliver.sh'
 		sleep(time: 1, unit: "MINUTES")
+		}
+		steps {
 		sh './jenkins/scripts/kill.sh' 
                 } 
             }
