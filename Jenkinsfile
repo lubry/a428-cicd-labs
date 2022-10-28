@@ -19,8 +19,6 @@
             stage('Deploy') { 
     	        steps {
                 sh './jenkins/scripts/deliver.sh'
-		}
-		steps {
                 echo "Wait a minutes"
                 sleep(time: 6, unit: "SECONDS")
             }
