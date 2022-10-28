@@ -20,7 +20,7 @@
     	        steps {
                 sh './jenkins/scripts/deliver.sh'
                 echo "Wait a minutes"
-                sleep(time: 6, unit: "SECONDS")
+                sleep(time: 60, unit: "SECONDS")
 		}
             }
 	    stage('End') {
