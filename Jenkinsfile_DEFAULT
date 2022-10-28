@@ -21,6 +21,10 @@
                 sh './jenkins/scripts/deliver.sh'
                 echo "Wait a minutes"
                 sleep(time: 60, unit: "SECONDS")
+		}
+            }
+	    stage('End') {
+		steps {
 		sh './jenkins/scripts/kill.sh' 
                 } 
             }
