@@ -17,12 +17,15 @@
                 }
             }
             stage('Deploy') { 
-    	        steps {
-                sh './jenkins/scripts/deliver.sh'
-                echo "Wait a minutes"
-                sleep(time: 60, unit: "SECONDS")
-		sh './jenkins/scripts/kill.sh' 
-                } 
+		input{
+    		 message "Do you want to proceed for production deployment?"
+  		}    	        
+		 steps {
+                 sh './jenkins/scripts/deliver.sh'
+                 echo "Wait a minutes"
+                 sleep(time: 60, unit: "SECONDS")
+		 sh './jenkins/scripts/kill.sh' 
+                 } 
             }
         }
     }
